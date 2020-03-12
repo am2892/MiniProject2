@@ -26,3 +26,4 @@
 - [ ]  function to calculate Population Correlation Coefficient
 - [ ]  function to calculate Proportion
 - [ ]  function to calculate Variance of sample proportion
+
