@@ -3,11 +3,11 @@
 
 ## TODO
 #### Sherif
-- [ ]  create a module to read CSV files
-- [ ]  function to calculate median
+- [x]  create a module to read CSV files
+- [x]  function to calculate median
 - [ ]  function to calculate z-score
 - [ ]  function to calculate population variance
-- [ ]  calculate standard deviation
+- [x]  calculate standard deviation
 - [ ]  add tests for each function
 
 #### Ariana
