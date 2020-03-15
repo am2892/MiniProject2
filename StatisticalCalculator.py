@@ -18,6 +18,7 @@ print('Select operation!')
 print('1.Median')
 print('2.Standard Deviation')
 print('3.Calculate Z-Score for each Number')
+print('4.Calculate Population Variance')
 
 choice = input('Enter choice:')
 
@@ -30,5 +31,8 @@ elif choice == "2":
 elif choice == "3":
     from zScore import zScore
     print('z-score: ', str(zScore(dataSet)))
+elif choice == "4":
+    from Variance import variance
+    print('variance: ', str(variance(dataSet)))
 else:
     print("(•̀ᴗ•́ )(•̀ᴗ•́ )(•̀ᴗ•́ ) something went wrong (•̀ᴗ•́ )(•̀ᴗ•́ )(•̀ᴗ•́ )")
