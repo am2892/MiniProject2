@@ -5,8 +5,8 @@
 #### Sherif
 - [x]  create a module to read CSV files
 - [x]  function to calculate median
-- [ ]  function to calculate z-score
-- [ ]  function to calculate population variance
+- [x]  function to calculate z-score
+- [x]  function to calculate population variance
 - [x]  calculate standard deviation
 - [ ]  add tests for each function
 
