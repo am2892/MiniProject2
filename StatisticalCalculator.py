@@ -1,3 +1,4 @@
+# coding: utf-8
 # import function to read csv file
 from FileReader import readCSV
 
@@ -17,6 +18,7 @@ choice = ''
 print('Select operation!')
 print('1.Population Mean')
 print('2.Median')
+print('3.Mode')
 print('5.Variance of Population Proportion')
 print('6.Calculate Z-Score for each Number')
 print('9.Confidence Interval')
@@ -32,6 +34,9 @@ if choice == "1":
 elif choice == "2":
     from Median import median
     print('median: ', str(median(dataSet)))
+elif choice =="3":
+    from mode import mode
+    print('mode(s): ', str(mode(dataSet)))
 elif choice == "5":
     from VariancePopulationProportion import variancePopulationProportion
     print('variance of population proportion: ', str(variancePopulationProportion(dataSet)))    
