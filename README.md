@@ -11,10 +11,10 @@
 - [ ]  add tests for each function
 
 #### Ariana
-- [ ]  function to calculate population mean
-- [ ]  function to calculate Variance of population proportion
-- [ ]  function to calculate Confidence Interval
-- [ ]  function to calculate Sample Mean
+- [x]  function to calculate Population Mean
+- [x]  function to calculate Variance of Population Proportion
+- [x]  function to calculate Confidence Interval
+- [x]  function to calculate Sample Mean
 - [ ]  add tests for each function
 
 
