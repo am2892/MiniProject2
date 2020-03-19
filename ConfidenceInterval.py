@@ -12,7 +12,6 @@ def confidenceInterval(dataSet):
         h = std_err * t.ppf((1 + confidence) / 2, n - 1)
 
         start = m + h
-        
         end = m - h
 
 return start, end
