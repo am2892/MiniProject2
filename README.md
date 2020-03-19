@@ -19,7 +19,7 @@
 
 
 #### Aaron
-- [ ]  function to calculate Mode
+- [x]  function to calculate Mode
 - [ ]  function to calculate Standardized score
 - [ ]  function to calculate P Value
 - [ ]  function to calculate Variance of sample proportion
