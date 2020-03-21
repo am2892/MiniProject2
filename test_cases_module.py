@@ -36,10 +36,18 @@ def test_calc_std_fail():
     from StandardDeviation import standardDeviation
     assert standardDeviation(dataSet) != 2
 
-def test_calc_mode():
-    from mode import mode
-    assert mode(testData) == "No mode within given dataset"
+def test_calc_varianceSampleProportion():
+    from VarianceSampleProportion import varianceSampleProportion
+    assert VarianceSampleProportion(testData) == 0 
 
-def test_calc_mode_fail():
-    from mode import mode
-    assert mode(testData) != 2
+def test_calc_varianceSampleProportion_fail():
+    from VarianceSampleProportion import varianceSampleProportion
+    assert VarianceSampleProportion(testData) != 2
+
+#def test_calc_mode():
+#    from mode import mode
+#    assert mode(testData) == "No mode within given dataset"
+
+#def test_calc_mode_fail():
+#    from mode import mode
+#    assert mode(testData) != 2
