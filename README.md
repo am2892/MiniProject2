@@ -5,9 +5,9 @@
 
 ### File Structure
 - [x] Create a module to read csv files
-- [ ] Create a module containing all statistical functions
-- [ ] Create a module allowing user to run statistical functions 
-- [ ] Create a module containing all test cases
+- [x] Create a module containing all statistical functions
+- [x] Create a module allowing user to run statistical functions 
+- [x] Create a module containing all test cases
 
 #### Sherif
 - [x]  create a module to read CSV files

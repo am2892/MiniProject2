@@ -29,31 +29,31 @@ print('14.Standard Deviation')
 choice = input('Enter choice:')
 
 if choice == "1":
-    from PopulationMean import populationMean
+    from StatisticsModule import populationMean
     print('population mean: ', str(populationMean(dataSet)))
 elif choice == "2":
-    from Median import median
+    from StatisticsModule import median
     print('median: ', str(median(dataSet)))
 elif choice =="3":
-    from mode import mode
+    from StatisticsModule import mode
     print('mode(s): ', str(mode(dataSet)))
 elif choice == "5":
-    from VariancePopulationProportion import variancePopulationProportion
+    from StatisticsModule import variancePopulationProportion
     print('variance of population proportion: ', str(variancePopulationProportion(dataSet)))    
 elif choice == "6":
-    from zScore import zScore
+    from StatisticsModule import zScore
     print('z-score: ', str(zScore(dataSet)))
 elif choice == "9":
-    from ConfidenceInterval import confidenceInterval
+    from StatisticsModule import confidenceInterval
     print('confidence interval: ', str(confidenceInterval(dataSet)))    
 elif choice == "10":
-    from Variance import variance
+    from StatisticsModule import variance
     print('variance: ', str(variance(dataSet)))
 elif choice == "13":
-    from SampleMean import sampleMean
+    from StatisticsModule import sampleMean
     print('sample mean: ', str(sampleMean(dataSet)))    
 elif choice == "14":
-    from StandardDeviation import standardDeviation
+    from StatisticsModule import standardDeviation
     print('standard deviation: ', str(standardDeviation(dataSet)))    
 else:
     print("(•̀ᴗ•́ )(•̀ᴗ•́ )(•̀ᴗ•́ ) something went wrong (•̀ᴗ•́ )(•̀ᴗ•́ )(•̀ᴗ•́ )")
