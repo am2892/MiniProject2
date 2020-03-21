@@ -35,3 +35,7 @@ def test_calc_std():
 def test_calc_std_fail():
     from StandardDeviation import standardDeviation
     assert standardDeviation(dataSet) != 2
+
+def test_calc_mode():
+    from mode import mode
+    assert mode(testData) != 2
