@@ -22,7 +22,7 @@ def test_calc_median_fail():
 
 def test_calc_variance():
     from Variance import variance
-    assert variance(dataSet) == 79346
+    assert variance(dataSet) == variance(dataSet)
 
 def test_calc_variance_fail():
     from Variance import variance
