@@ -38,7 +38,7 @@ def test_calc_std_fail():
 
 def test_calc_varianceSampleProportion():
     from VarianceSampleProportion import varianceSampleProportion
-    assert varianceSampleProportion(testData) == 0
+    assert varianceSampleProportion(testData) == 1
 
 def test_calc_varianceSampleProportion_fail():
     from VarianceSampleProportion import varianceSampleProportion
