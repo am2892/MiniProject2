@@ -38,7 +38,7 @@ def test_calc_std_fail():
 
 def test_calc_mode():
     from mode import mode
-    assert mode(testData) = "No mode within given dataset"
+    assert mode(testData) == "No mode within given dataset"
 
 def test_calc_mode_fail():
     from mode import mode
