@@ -5,6 +5,9 @@ from FileReader import readCSV
 # import math library
 import math
 
+from scipy.stats import sem, t
+#  In order to calculate two of these functions, scipy must be imported
+
 #  get numbers from dataset
 dataSet = readCSV('CSV_files/test.csv')
 
