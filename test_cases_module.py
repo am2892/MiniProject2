@@ -38,11 +38,11 @@ def test_calc_std_fail():
 
 def test_calc_varianceSampleProportion():
     from VarianceSampleProportion import varianceSampleProportion
-    assert VarianceSampleProportion(testData) == 0 
+    assert varianceSampleProportion(testData) == 0
 
 def test_calc_varianceSampleProportion_fail():
     from VarianceSampleProportion import varianceSampleProportion
-    assert VarianceSampleProportion(testData) != 2
+    assert varianceSampleProportion(testData) != 2
 
 #def test_calc_mode():
 #    from mode import mode
