@@ -24,4 +24,4 @@ def mode(dataSet):
     else:
         getMode = "Mode is / are: " + ', '.join(map(str, modeValue))
 
-    print getMode
+    print(getMode)
