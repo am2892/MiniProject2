@@ -2,6 +2,13 @@
 [![Build Status](https://travis-ci.org/am2892/MiniProject2.svg?branch=master)](https://travis-ci.org/am2892/MiniProject2)
 
 ## TODO
+
+### File Structure
+- [x] Create a module to read csv files
+- [x] Create a module containing all statistical functions
+- [x] Create a module allowing user to run statistical functions 
+- [x] Create a module containing all test cases
+
 #### Sherif
 - [x]  create a module to read CSV files
 - [x]  function to calculate median
