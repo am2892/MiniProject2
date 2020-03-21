@@ -7,7 +7,7 @@ dataSet = readCSV('CSV_files/test.csv')
 
 def confidenceInterval(dataSet):
         n = len(dataSet)
-        m = sum(dataSet) / len(dataSet)
+        m = sum(dataSet) / n
         std_err = sem(dataSet)
         h = std_err * t.ppf((1 + confidence) / 2, n - 1)
 
