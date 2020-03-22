@@ -4,8 +4,8 @@ from FileReader import readCSV
 
 # import math library
 import math
-import pandas as pd
-from scipy.stats import sem, t
+#import pandas as pd
+#from scipy.stats import sem, t
 #  In order to calculate two of these functions, scipy must be imported
 
 #  get numbers from dataset
