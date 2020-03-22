@@ -118,6 +118,7 @@ def sampleMean(dataSet):
     #import pandas as pd
     #data = pd.read_csv('CSV_files/test.csv', nrows=10)    
    # read_csv(..., nrows=10)   
+    shortendDataSet = dataSet[0:5]
     smean = sum(dataSet) / len(dataSet)
 
     return smean
