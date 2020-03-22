@@ -115,7 +115,9 @@ def confidenceInterval(dataSet):
 
 #13 Sample Mean
 def sampleMean(dataSet):
-#     read_csv(..., nrows=10)   
+    import pandas as pd
+    data = pd.read_csv('CSV_files/test.csv', nrows=10)    
+   # read_csv(..., nrows=10)   
     smean = sum(dataSet) / len(dataSet)
 
     return smean
