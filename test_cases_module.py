@@ -65,11 +65,13 @@ def test_zScore_fail():
 #7 - Standardized Score Tests
 #def test_calc_standardizedScore():
 #    from StandardizedScore import standardizedScore
-#    assert standardizedScore(testData) ==
+#    scores = standardizedScore(testData)
+#    assert scores == [-1.0, 0.0, 1.0]
 
-#def test_calc_standardizedScore_fail():
-#    from StandardizedScore import StandardizedScore
-#    assert standardizedScore(testData) !=
+def test_calc_standardizedScore_fail():
+    from StandardizedScore import StandardizedScore
+    scores = standardizedScore(testData)
+    assert standardizedScore(testData) != [3.6, 9.6, 18.6]
 
 #8 - Population Correleation Coefficient Tests
 
