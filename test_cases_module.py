@@ -34,7 +34,7 @@ def test_calc_median_fail():
 #3 - Mode Tests
 def test_calc_mode():
    from StatisticsModule import mode
-   assert mode(testData) == mode(testData)
+   assert mode(testData) == "No mode within given dataset"
 
 def test_calc_mode_fail():
     from StatisticsModule import mode
