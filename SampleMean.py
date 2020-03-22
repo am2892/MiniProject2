@@ -3,9 +3,9 @@ import math
 
 dataSet = readCSV('CSV_files/test.csv')
 
-# read_csv(..., nrows=10)
 
 def sampleMean(dataSet):
+        shortendDataSet = dataSet[0:5]
         smean = sum(dataSet) / len(dataSet)
 
         return smean
