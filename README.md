@@ -22,7 +22,7 @@
 - [x]  function to calculate Variance of Population Proportion
 - [x]  function to calculate Confidence Interval
 - [x]  function to calculate Sample Mean
-- [ ]  add tests for each function
+- [x]  add tests for each function
 
 
 #### Aaron
