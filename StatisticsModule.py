@@ -53,7 +53,11 @@ def variance(dataSet):
 def variancePopulationProportion(dataSet):
     mean = sum(dataSet) / len(dataSet)
     populationProportion = 1 / len(dataSet)
-    variance = sum((xi - mean) ** 2 for xi in dataSet) / (1 / len(dataSet))
+    print('populationProportion: ', populationProportion)
+    if populationProportion != 0:
+        variance = sum((xi - mean) ** 2 for xi in dataSet) / populationProportion
+    else:
+        variance = 0            
 
     return variance
 
@@ -63,11 +67,12 @@ def variancePopulationProportion(dataSet):
 def zScore(dataSet):
     mean = sum(dataSet) / len(dataSet)
     std = math.sqrt(sum([(val - mean)**2 for val in dataSet])/(len(dataSet) - 1))
-
+    scores = []
     for num in dataSet:
         # calculates the z-score of each number in the dataset
         zScore = (num - mean)/std
-        print("z-score of", num, "=", zScore)
+        scores.append(zScore)
+    return scores
 
 # zScore(dataSet)
 #7 Standardized Score 
@@ -98,7 +103,7 @@ def confidenceInterval(dataSet):
 
 #13 Sample Mean
 def sampleMean(dataSet):
-    read_csv(..., nrows=10)   
+#     read_csv(..., nrows=10)   
     smean = sum(dataSet) / len(dataSet)
 
     return smean
@@ -111,5 +116,11 @@ def standardDeviation(dataSet):
 
     return std
 #15 Variance of sample proportion
+def varianceSampleProportion(dataSet):
+    mean = sum(dataSet) / len(dataSet)
+    varianceSampleProportion = sum((xi - mean) ** 2 for xi in dataSet) / (len(dataSet) - 1)
 
+    return varianceSampleProportion
+
+    print("Variance of Sample Proportion is:", varianceSampleProportion)
 
