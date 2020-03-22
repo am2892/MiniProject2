@@ -93,7 +93,7 @@ def standardizedScore(dataSet):
 
 #9 Confidence Interval
 def confidenceInterval(dataSet):
-    from scipy.stats import sem, t
+   # from scipy.stats import sem, t
     confidence = .95
     n = len(dataSet)
     m = sum(dataSet) / n
@@ -114,10 +114,7 @@ def confidenceInterval(dataSet):
 #12 Proportion
 
 #13 Sample Mean
-def sampleMean(dataSet):
-    #import pandas as pd
-    #data = pd.read_csv('CSV_files/test.csv', nrows=10)    
-   # read_csv(..., nrows=10)   
+def sampleMean(dataSet):   
     shortendDataSet = dataSet[0:5]
     smean = sum(dataSet) / len(dataSet)
 
