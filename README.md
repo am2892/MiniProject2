@@ -15,7 +15,7 @@
 - [x]  function to calculate z-score
 - [x]  function to calculate population variance
 - [x]  calculate standard deviation
-- [ ]  add tests for each function
+- [x]  add tests for each function
 
 #### Ariana
 - [x]  function to calculate Population Mean
