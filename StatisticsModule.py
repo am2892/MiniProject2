@@ -1,5 +1,6 @@
 from FileReader import readCSV
 import math
+from scipy import sem, t
 
 dataSet = readCSV('CSV_files/test.csv')
 
@@ -93,7 +94,6 @@ def standardizedScore(dataSet):
 
 #9 Confidence Interval
 def confidenceInterval(dataSet):
-    from scipy import sem, t
     confidence = .95
     n = len(dataSet)
     m = sum(dataSet) / n
