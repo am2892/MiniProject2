@@ -69,7 +69,7 @@ def test_zScore_fail():
 #    assert scores == [-1.0, 0.0, 1.0]
 
 def test_calc_standardizedScore_fail():
-    from StandardizedScore import StandardizedScore
+    from StandardizedScore import standardizedScore
     scores = standardizedScore(testData)
     assert standardizedScore(testData) != [3.6, 9.6, 18.6]
 

@@ -14,4 +14,4 @@ def standardizedScore(dataSet):
         scores.append(standardizedScore)
     return scores
 
-print("Standardized Scores of dataset:", standardizedScore(dataSet))
+    print("Standardized Scores of dataset:", standardizedScore(dataSet))
