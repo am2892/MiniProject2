@@ -93,7 +93,7 @@ def standardizedScore(dataSet):
 
 #9 Confidence Interval
 def confidenceInterval(dataSet):
-   # from scipy.stats import sem, t
+    from scipy.stats import sem, t
     confidence = .95
     n = len(dataSet)
     m = sum(dataSet) / n
