@@ -66,7 +66,7 @@ def test_zScore_fail():
 def test_calc_standardizedScore():
     from StandardizedScore import standardizedScore
     scores = standardizedScore(testData)
-    assert scores == [(-1.0/math.sqrt(2/3)), 0.0, (1.0/math.sqrt(2/3))]
+    assert scores == [(-1.0/(math.sqrt(2/3))), 0.0, (1.0/(math.sqrt(2/3)))]
 
 def test_calc_standardizedScore_fail():
     from StandardizedScore import standardizedScore
