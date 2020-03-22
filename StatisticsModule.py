@@ -75,7 +75,19 @@ def zScore(dataSet):
     return scores
 
 # zScore(dataSet)
-#7 Standardized Score 
+#7 Standardized Score
+def standardizedScore(dataSet):
+    mean = sum(dataSet) / len(dataSet)
+    std = math.sqrt(sum((val - mean) ** 2 for val in dataSet))/(len(dataSet))
+
+    scores = []
+
+    for num in dataSet:
+        standardizedScore = (num - mean)/std
+        scores.append(standardizedScore)
+    return scores
+
+#    print("Standardized Scores of dataset:", standardizedScore(dataSet)) 
 
 #8 Population Correlation Coefficient 
 
