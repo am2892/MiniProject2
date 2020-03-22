@@ -3,7 +3,7 @@ from FileReader import readCSV
 dataSet = readCSV('CSV_files/test.csv')
 testData = [1,2,3]
 
-#do we need to import scipy here?
+from scipy.stats import sem, t
 
 def test_csv_reader():
     dataSet = readCSV('CSV_files/test.csv')
@@ -33,8 +33,8 @@ def test_calc_median_fail():
 
 #3 - Mode Tests
 def test_calc_mode():
-   from StatisticsModule import mode
-   assert mode(testData) == mode(testData)
+    from StatisticsModule import mode
+    assert mode(testData) == "No mode within given dataset"
 
 def test_calc_mode_fail():
     from StatisticsModule import mode
@@ -63,13 +63,15 @@ def test_zScore_fail():
     assert scores != [0.0, 2, 5]
 
 #7 - Standardized Score Tests
-#def test_calc_standardizedScore():
-#    from StandardizedScore import standardizedScore
-#    assert standardizedScore(testData) ==
+def test_calc_standardizedScore():
+    from StatisticsModule import standardizedScore
+    scores = standardizedScore(testData)
+#    assert scores == [(-1.0/(math.sqrt(2/3))), 0.0, (1.0/(math.sqrt(2/3)))]
 
-#def test_calc_standardizedScore_fail():
-#    from StandardizedScore import StandardizedScore
-#    assert standardizedScore(testData) !=
+def test_calc_standardizedScore_fail():
+    from StatisticsModule import standardizedScore
+    scores = standardizedScore(testData)
+    assert standardizedScore(testData) != [3.6, 9.6, 18.6]
 
 #8 - Population Correleation Coefficient Tests
 
