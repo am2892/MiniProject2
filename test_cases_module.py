@@ -53,13 +53,13 @@ def test_calc_variancePopulationProportion_fail():
 #6 - Z-Score Tests
 
 #7 - Standardized Score Tests
-def test_calc_standardizedScore():
-    from StandardizedScore import standardizedScore
-    assert standardizedScore(testData) ==
+#def test_calc_standardizedScore():
+#    from StandardizedScore import standardizedScore
+#    assert standardizedScore(testData) ==
 
-def test_calc_standardizedScore_fail():
-    from StandardizedScore import StandardizedScore
-    assert standardizedScore(testData) !=
+#def test_calc_standardizedScore_fail():
+#    from StandardizedScore import StandardizedScore
+#    assert standardizedScore(testData) !=
 
 #8 - Population Correleation Coefficient Tests
 
