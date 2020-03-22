@@ -77,8 +77,8 @@ def zScore(dataSet):
 #9 Confidence Interval
 def confidenceInterval(dataSet):
     from scipy.stats import sem, t
-    n = len(dataSet)
     confidence = .95
+    n = len(dataSet)
     m = sum(dataSet) / n
     std_err = sem(dataSet)
     h = std_err * t.ppf((1 + confidence) / 2, n - 1)
