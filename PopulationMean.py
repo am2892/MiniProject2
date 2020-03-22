@@ -8,4 +8,4 @@ def populationMean(dataSet):
 
         return mean
 
-print("Population mean is:", mean) 
+        print("Population mean is:", mean) 

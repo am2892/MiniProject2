@@ -14,6 +14,6 @@ def confidenceInterval(dataSet):
         start = m + h
         end = m - h
 
-return start, end
+        return start, end
 
-print ("Confidence Interval is:", start, end)
+        print ("Confidence Interval is:", start, end)
