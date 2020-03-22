@@ -2,27 +2,34 @@
 [![Build Status](https://travis-ci.org/am2892/MiniProject2.svg?branch=master)](https://travis-ci.org/am2892/MiniProject2)
 
 ## TODO
+
+### File Structure
+- [x] Create a module to read csv files
+- [x] Create a module containing all statistical functions
+- [x] Create a module allowing user to run statistical functions 
+- [x] Create a module containing all test cases
+
 #### Sherif
-- [ ]  create a module to read CSV files
-- [ ]  function to calculate median
-- [ ]  function to calculate z-score
-- [ ]  function to calculate population variance
-- [ ]  calculate standard deviation
-- [ ]  add tests for each function
+- [x]  create a module to read CSV files
+- [x]  function to calculate median
+- [x]  function to calculate z-score
+- [x]  function to calculate population variance
+- [x]  calculate standard deviation
+- [x]  add tests for each function
 
 #### Ariana
-- [ ]  function to calculate population mean
-- [ ]  function to calculate Variance of population proportion
-- [ ]  function to calculate Confidence Interval
-- [ ]  function to calculate Sample Mean
-- [ ]  add tests for each function
+- [x]  function to calculate Population Mean
+- [x]  function to calculate Variance of Population Proportion
+- [x]  function to calculate Confidence Interval
+- [x]  function to calculate Sample Mean
+- [x]  add tests for each function
 
 
 #### Aaron
-- [ ]  function to calculate Mode
-- [ ]  function to calculate Standardized score
+- [x]  function to calculate Mode
+- [x]  function to calculate Standardized score
 - [ ]  function to calculate P Value
-- [ ]  function to calculate Variance of sample proportion
+- [x]  function to calculate Variance of sample proportion
 - [ ]  add tests for each function
 
 
