@@ -45,7 +45,7 @@ def test_calc_mode_fail():
 #5 - Variance of Population Proportion Tests
 def test_calc_variancePopulationProportion():
     from StatisticsModule import variancePopulationProportion
-    assert variancePopulationProportion(testData) == 0
+    assert variancePopulationProportion(testData) == 6
 
 def test_calc_variancePopulationProportion_fail():
     from StatisticsModule import variancePopulationProportion
