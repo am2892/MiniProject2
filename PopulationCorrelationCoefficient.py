@@ -1,56 +1,39 @@
 import math
 
-class PCC:
+from FileReader import readCSV
 
-# PCC = (n*Exy) - (Ex*Ey)/ sqrt((n*Ex2-Ex**2)* (n*Ey2-Ey**2))
-    def pcc(CSValuesX,CSValuesY):
-
-        Ex = sum(CSValuesX)
-        # The sum of all the values for CSValuesX
-
-        Ey = sum(CSValuesY)
-        # The sum of all the values for CSValuesY
-
-        Exy = 0
-        # The sum of all the values for CSValuesX time CSValuesY
-
-        Ex2 = 0
-        # The sum of all the values for CSValuesX squared
-
-        Ey2 = 0
-        # The sum of all the values for CSValuesY squared
-
-        n = len(CSValuesX)
-        # the number of numbers in CSValues
-
-        if n != len(CSValuesY):
-
-            cake ='The two data sets that you have entered do not have the same number of numbers.'
-            return cake
-        else:
-            for i in range(len(CSValuesX)):
-                Exy += CSValuesX[i]* CSValuesY[i]
-
-                Ex2 += CSValuesX[i] ** 2
-
-                Ey2 += CSValuesY[i] ** 2
-
-            # for loop for getting sums
+dataSet = readCSV('CSV_files/test.csv')
 
 
-            Top = 0
+def pcc(dataSet):
 
-            Top = (n*Exy) - (Ex*Ey)
+    dataSet.pop()
+    dataSetX = dataSet[9:18]
+    dataSetY = dataSet[0:9]
 
-            Bottom = 0
+    Ex = sum(dataSetX)
+    Ey = sum(dataSetY)
+    Exy = 0
+    Ex2 = 0
+    Ey2 = 0
+    n = len(dataSetX)
 
-            Bottom = math.sqrt((n*Ex2-Ex**2)* (n*Ey2-Ey**2))
+    if n != len(dataSetY):
+        cake ='The two data sets that you have entered do not have the same number of numbers.'
+        return cake
+    else:
+        for i in range(len(dataSetX)):
+            Exy += dataSetX[i]* dataSetY[i]
+            Ex2 += dataSetX[i] ** 2
+            Ey2 += dataSetY[i] ** 2
 
-            ans = Top/Bottom
+        Top = 0
+        Top = (n*Exy) - (Ex*Ey)
+        Bottom = 0
+        Bottom = math.sqrt((n*Ex2-Ex**2)* (n*Ey2-Ey**2))
+        ans = Top/Bottom
+        return ans
 
-            return ans
+print(pcc(dataSet))
 
-
-#if __name__=="__main__":
-#    print(PCC.pcc([5,9,10,12,6,3,4],[1,12,5,3,6,5,7]))
 

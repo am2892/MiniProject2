@@ -1,5 +1,4 @@
 from FileReader import readCSV
-import csv
 dataSet = readCSV('CSV_files/test.csv')
 
 def varianceSampleProportion(dataSet):
@@ -8,4 +7,5 @@ def varianceSampleProportion(dataSet):
 
     return varianceSampleProportion
 
-    print("Variance of Sample Proportion is:", varianceSampleProportion)
+print("Variance of Sample Proportion is:", varianceSampleProportion(dataSet))
+
