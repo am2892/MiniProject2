@@ -1,5 +1,6 @@
 from FileReader import readCSV
 import math
+#from scipy import sem, t
 
 dataSet = readCSV('CSV_files/test.csv')
 
@@ -90,15 +91,44 @@ def standardizedScore(dataSet):
 #    print("Standardized Scores of dataset:", standardizedScore(dataSet)) 
 
 #8 Population Correlation Coefficient 
+def populationCorrelationCoefficient(dataSet):
+
+    dataSet.pop()
+    dataSetX = dataSet[9:18]
+    dataSetY = dataSet[0:9]
+
+    Ex = sum(dataSetX)
+    Ey = sum(dataSetY)
+    Exy = 0
+    Ex2 = 0
+    Ey2 = 0
+    n = len(dataSetX)
+
+    if n != len(dataSetY):
+        cake ='The two data sets that you have entered do not have the same number of numbers.'
+        return cake
+    else:
+        for i in range(len(dataSetX)):
+            Exy += dataSetX[i]* dataSetY[i]
+            Ex2 += dataSetX[i] ** 2
+            Ey2 += dataSetY[i] ** 2
+
+        Top = 0
+        Top = (n*Exy) - (Ex*Ey)
+        Bottom = 0
+        Bottom = math.sqrt((n*Ex2-Ex**2)* (n*Ey2-Ey**2))
+        ans = Top/Bottom
+        return ans
 
 #9 Confidence Interval
 def confidenceInterval(dataSet):
-    from scipy.stats import sem, t
     confidence = .95
     n = len(dataSet)
     m = sum(dataSet) / n
-    std_err = sem(dataSet)
-    h = std_err * t.ppf((1 + confidence) / 2, n - 1)
+    std = math.sqrt(sum([(val - m)**2 for val in dataSet])/(len(dataSet) - 1))
+    std_err = std / math.sqrt(n)
+    t = m / std_err
+    h = std_err * t * float(1 + confidence) / float(2., n - 1)
 
     start = m + h
     end = m - h
@@ -114,8 +144,8 @@ def confidenceInterval(dataSet):
 #12 Proportion
 
 #13 Sample Mean
-def sampleMean(dataSet):
-#     read_csv(..., nrows=10)   
+def sampleMean(dataSet):   
+    shortendDataSet = dataSet[0:5]
     smean = sum(dataSet) / len(dataSet)
 
     return smean
@@ -136,3 +166,24 @@ def varianceSampleProportion(dataSet):
 
     print("Variance of Sample Proportion is:", varianceSampleProportion)
 
+#16 Population Standard Deviation
+def populationStandardDeviation(dataSet):
+    # CSVlues are supposed to be the values that are given
+    u = 0
+    #This is the Mean
+    Top = 0
+    # This is the top half of the equation
+    Set = 0
+    # This the bottom half of the equation
+    Ans = 0
+    # This is the Answer
+    u = sum(dataSet)/len(dataSet)
+
+    for i in dataSet:
+        Top +=(i-u)**2
+
+    Set = Top/len(dataSet)
+
+    Ans = math.sqrt(Set)
+
+    return Ans

@@ -37,5 +37,4 @@
 - [x]  function to calculate Population Standard Deviation
 - [x]  function to calculate Population Correlation Coefficient
 - [x]  function to calculate Proportion
-- [x]  function to calculate Variance of sample proportion (was completed by Aaron)
 - [ ]  add tests for each function
