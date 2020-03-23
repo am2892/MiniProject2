@@ -1,6 +1,6 @@
 from FileReader import readCSV
 import math
-from scipy import sem, t
+#from scipy import sem, t
 
 dataSet = readCSV('CSV_files/test.csv')
 
@@ -97,8 +97,9 @@ def confidenceInterval(dataSet):
     confidence = .95
     n = len(dataSet)
     m = sum(dataSet) / n
-    std_err = sem(dataSet)
-    h = std_err * t.ppf((1 + confidence) / 2, n - 1)
+    std_err = std / math.sqrt(n)
+    t = m / std_err
+    h = std_err * t ((1 + confidence) / 2, n - 1)
 
     start = m + h
     end = m - h
