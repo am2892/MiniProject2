@@ -18,7 +18,7 @@ class Proportion:
             return ans
 
         except:
-            return 'Pay attion, also I can not divide by zero :("
+            return 'Pay attion, also I can not divide by zero :('
 
 #if __name__=="__main__":
 #    print(Proportion.proportion([5,9,10,12,6,3,4]))
