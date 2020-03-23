@@ -25,6 +25,7 @@ print('3.Mode')
 print('4.Population Standard Deviation')
 print('5.Variance of Population Proportion')
 print('6.Calculate Z-Score for each Number')
+print('7.Calculate Standardized score for each number')
 print('8.Calculate Population Correlation Coefficient')
 print('9.Confidence Interval')
 print('10.Calculate Population Variance')
@@ -52,6 +53,9 @@ elif choice == "5":
 elif choice == "6":
     from StatisticsModule import zScore
     print('z-score: ', str(zScore(dataSet)))
+elif choice == "7":
+    from StatisticsModule import standardizedScore
+    print('Standardized Score: ', str(standardizedScore(dataSet)))
 elif choice == "8":
     from StatisticsModule import populationCorrelationCoefficient
     print('Population Correlation Coefficient: ', str(populationCorrelationCoefficient(dataSet)))
