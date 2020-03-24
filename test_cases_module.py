@@ -41,6 +41,13 @@ def test_calc_mode_fail():
     assert mode(testData) != 2
 
 #4 - Population Standard Deviation Tests
+def test_calc_populationStandardDeviation():
+    from StatisticsModule import populationStandardDeviation
+    assert populationStandardDeviation(testData) == 0.816496580927726
+
+def test_calc_populationStandardDeviation_fail():
+    from StatisticsModule import populationStandardDeviation
+    assert populationStandardDeviation(testData) != 0.48
 
 #5 - Variance of Population Proportion Tests
 def test_calc_variancePopulationProportion():
@@ -74,6 +81,13 @@ def test_calc_standardizedScore_fail():
     assert standardizedScore(testData) != [3.6, 9.6, 18.6]
 
 #8 - Population Correleation Coefficient Tests
+def test_calc_populationCorrelationCoefficient():
+    from StatisticsModule import populationCorrelationCoefficient
+    assert populationCorrelationCoefficient(dataSet)) == -0.3824629627243922
+
+def test_calc_populationCorrelationCoefficient_fail():
+    from StatisticsModule import populationCorrelationCoefficient
+    assert populationCorrelationCoefficient(dataSet) != 5
 
 #9 - Confidence Interval Tests
 #def test_calc_confidenceInterval():
@@ -96,6 +110,13 @@ def test_calc_variance_fail():
 #11 - P-Value Tests
 
 #12 - Proportion Tests
+def test_calc_proportion():
+    from StatisticsModule import proportion
+    assert proportion(testData)) == ['0.1667', '0.3333', '0.5000']
+
+def test_calc_proportion_fail():
+    from StatisticsModule import proportion
+    assert proportion(testData) != ['0.5000', '0.2000', '0.3000']
 
 #13 - Sample Mean Tests
 #for Sample Mean, I chose the numbers 1 & 3 as sample so 1 + 3 = 4 / 2 since n = 2 not 3
