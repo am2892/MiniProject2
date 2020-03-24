@@ -83,7 +83,7 @@ def test_calc_standardizedScore_fail():
 #8 - Population Correleation Coefficient Tests
 def test_calc_populationCorrelationCoefficient():
     from StatisticsModule import populationCorrelationCoefficient
-    assert populationCorrelationCoefficient(dataSet)) == -0.3824629627243922
+    assert populationCorrelationCoefficient(dataSet) == -0.3824629627243922
 
 def test_calc_populationCorrelationCoefficient_fail():
     from StatisticsModule import populationCorrelationCoefficient
