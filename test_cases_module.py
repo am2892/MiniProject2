@@ -112,7 +112,7 @@ def test_calc_variance_fail():
 #12 - Proportion Tests
 def test_calc_proportion():
     from StatisticsModule import proportion
-    assert proportion(testData)) == ['0.1667', '0.3333', '0.5000']
+    assert proportion(testData) == ['0.1667', '0.3333', '0.5000']
 
 def test_calc_proportion_fail():
     from StatisticsModule import proportion
