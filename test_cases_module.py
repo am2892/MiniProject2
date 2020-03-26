@@ -3,8 +3,6 @@ from FileReader import readCSV
 dataSet = readCSV('CSV_files/test.csv')
 testData = [1,2,3]
 
-import scipy
-#from scipy import sem, t
 
 def test_csv_reader():
     dataSet = readCSV('CSV_files/test.csv')
@@ -120,7 +118,6 @@ def test_calc_proportion_fail():
     assert proportion(testData) != ['0.5000', '0.2000', '0.3000']
 
 #13 - Sample Mean Tests
-#for Sample Mean, I chose the numbers 1 & 3 as sample so 1 + 3 = 4 / 2 since n = 2 not 3
 def test_calc_sampleMean():
     from StatisticsModule import sampleMean
     assert sampleMean(testData) == 2
