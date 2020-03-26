@@ -40,7 +40,7 @@ def mode(dataSet):
 
 # print(str(mode(dataSet)))
 
-#4 Population Variance
+#4 Population Variance 
 def variance(dataSet):
     mean = sum(dataSet) / len(dataSet)
 
