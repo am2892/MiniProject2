@@ -29,9 +29,11 @@ print('7.Calculate Standardized score for each number')
 print('8.Calculate Population Correlation Coefficient')
 print('9.Confidence Interval')
 print('10.Calculate Population Variance')
-print('12.Variance Sample Proportion')
+print('11.P-Value')
+print('12.Proportion')
 print('13.Sample Mean')
-print('14.Standard Deviation')
+print('14.Sample Standard Deviation')
+print('15.Variance of Sample Proportion')
 
 choice = input('Enter choice:')
 
@@ -65,14 +67,20 @@ elif choice == "9":
 elif choice == "10":
     from StatisticsModule import variance
     print('variance: ', str(variance(dataSet)))
+#elif choice == "11":
+#    from StatisticsModule import pValue
+#    print('p-value: ', str(pValue(dataSet)))
 elif choice == "12":
-    from StatisticsModule import varianceSampleProportion
-    print('Variance Sample Proportion: ', str(varianceSampleProportion(dataSet)))
+    from StatisticsModule import proportion
+    print('proportion: ', str(proportion(dataSet)))
 elif choice == "13":
     from StatisticsModule import sampleMean
-    print('sample mean: ', str(sampleMean(dataSet)))    
+    print('sample mean: ', str(sampleMean(dataSet)))
 elif choice == "14":
     from StatisticsModule import standardDeviation
-    print('standard deviation: ', str(standardDeviation(dataSet)))    
+    print('standard deviation: ', str(standardDeviation(dataSet)))
+elif choice == "15":
+    from StatisticsModule import varianceSampleProportion
+    print('Variance Sample Proportion: ', str(varianceSampleProportion(dataSet)))
 else:
     print("(•̀ᴗ•́ )(•̀ᴗ•́ )(•̀ᴗ•́ ) something went wrong (•̀ᴗ•́ )(•̀ᴗ•́ )(•̀ᴗ•́ )")
