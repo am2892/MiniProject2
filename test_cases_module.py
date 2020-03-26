@@ -4,7 +4,7 @@ dataSet = readCSV('CSV_files/test.csv')
 testData = [1,2,3]
 
 import scipy
-from scipy import sem, t
+#from scipy import sem, t
 
 def test_csv_reader():
     dataSet = readCSV('CSV_files/test.csv')
