@@ -1,5 +1,6 @@
 from FileReader import readCSV
 import math
+import scipy
 from scipy import sem, t
 
 dataSet = readCSV('CSV_files/test.csv')
