@@ -143,7 +143,6 @@ def confidenceInterval(dataSet):
 
 #12 Proportion
 def proportion(dataSet):
-
     try:
         ans = []
 
