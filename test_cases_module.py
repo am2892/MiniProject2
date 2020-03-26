@@ -21,7 +21,7 @@ def test_calc_populationMean_fail():
     from StatisticsModule import populationMean
     assert populationMean(testData) != 1
 
-#2 - Median Tests
+#2 - Median Tests 
 def test_calc_median():
     from StatisticsModule import median
     assert median(testData) == 2
