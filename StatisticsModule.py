@@ -152,8 +152,8 @@ def proportion(dataSet):
             ans.append('{:.4f}'.format(temp))
         return ans
 
-    #except:
-    #        return 'Pay attion, also I can not divide by zero :("
+    except:
+        return "Pay attion, also I can not divide by zero :("
 
 #13 Sample Mean
 def sampleMean(dataSet):
