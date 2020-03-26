@@ -142,19 +142,19 @@ def confidenceInterval(dataSet):
 #11 P Value
 
 #12 Proportion
-def proportion(dataSet):
-    try:
-        ans = []
+#def proportion(dataSet):
+#    try:
+#        ans = []
 
-        total = sum(dataSet)
+#        total = sum(dataSet)
 
-        for i in dataSet:
+#        for i in dataSet:
 
-            temp = i/total
+#            temp = i/total
 
-            ans.append('{:.4f}'.format(temp))
+#            ans.append('{:.4f}'.format(temp))
 
-        return ans
+#        return ans
 
     #except:
     #        return 'Pay attion, also I can not divide by zero :("
