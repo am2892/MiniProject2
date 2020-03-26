@@ -161,7 +161,7 @@ def proportion(dataSet):
     #        return 'Pay attion, also I can not divide by zero :("
 
 #13 Sample Mean
-def sampleMean(dataSet):   
+def sampleMean(dataSet):
     shortendDataSet = dataSet[0:5]
     smean = sum(dataSet) / len(dataSet)
 
