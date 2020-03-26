@@ -6,8 +6,8 @@ dataSet = readCSV('CSV_files/test.csv')
 
 #1 Population Mean
 def populationMean(dataSet):
-        mean = sum(dataSet) / len(dataSet)
-        return mean
+    mean = sum(dataSet) / len(dataSet)
+    return mean
 
 # print("Population mean: ", str(populationMean(dataSet)))
 
