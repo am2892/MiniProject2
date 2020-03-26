@@ -1,7 +1,7 @@
 from FileReader import readCSV
 import math
 import scipy
-from scipy import sem, t
+#from scipy import sem, t
 
 dataSet = readCSV('CSV_files/test.csv')
 
@@ -123,6 +123,8 @@ def populationCorrelationCoefficient(dataSet):
 
 #9 Confidence Interval
 def confidenceInterval(dataSet):
+    scipy.sem
+    scipy.t
     confidence = .95
     n = len(dataSet)
     m = sum(dataSet) / n
