@@ -1,5 +1,6 @@
 import math
 from FileReader import readCSV
+import scipy
 from scipy.stats import t
 import numpy
 
