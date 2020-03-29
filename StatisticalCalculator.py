@@ -64,9 +64,9 @@ elif choice == "9":
 elif choice == "10":
     from StatisticsModule import variance
     print('variance: ', str(variance(dataSet)))
-#elif choice == "11":
-#    from StatisticsModule import pValue
-#    print('p-value: ', str(pValue(dataSet)))
+elif choice == "11":
+    from StatisticsModule import pValue
+    print('p-value: ', str(pValue(dataSet)))
 elif choice == "12":
     from StatisticsModule import proportion
     print('proportion: ', str(proportion(dataSet)))
