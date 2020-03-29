@@ -1,5 +1,8 @@
 import math
 from FileReader import readCSV
+from scipy.stats import t
+import numpy
+
 dataSet = readCSV('CSV_files/test.csv')
 testData = [1,2,3]
 
