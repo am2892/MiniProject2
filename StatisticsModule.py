@@ -142,6 +142,9 @@ def confidenceInterval(dataSet):
 
 #11 P Value
 def pValue(dataSet):
+    set1 = dataSet[0:9]
+    set2 = dataSet[9:18]
+
     mean_1 = sum(set1)/len(set1)
     mean_2 = sum(set2)/len(set2)
 
@@ -161,9 +164,9 @@ def pValue(dataSet):
 
     critical_value = t.ppf(1.0 - alpha, deg_of_freedom)
 
-    pValue = (1 - t.cdf(abs(t_statstic), deg_of_freedom)) * 2
+    pValue = (1 - t.cdf(abs(t_statistic), deg_of_freedom)) * 2
 
-    if p > alpha:
+    if pValue > alpha:
         return("Null hypothesis accepted: means are equal.")
     else:
         return("Null hypothesis rejected: means are not equal.")
