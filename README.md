@@ -28,13 +28,13 @@
 #### Aaron
 - [x]  function to calculate Mode
 - [x]  function to calculate Standardized score
-- [ ]  function to calculate P Value
+- [x]  function to calculate P Value
 - [x]  function to calculate Variance of sample proportion
-- [ ]  add tests for each function
+- [x]  add tests for each function
 
 
 #### Al
 - [x]  function to calculate Population Standard Deviation
 - [x]  function to calculate Population Correlation Coefficient
 - [x]  function to calculate Proportion
-- [ ]  add tests for each function
+- [x]  add tests for each function
