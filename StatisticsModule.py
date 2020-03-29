@@ -1,4 +1,6 @@
 from FileReader import readCSV
+from scipy.stats import t
+import numpy
 import math
 
 dataSet = readCSV('CSV_files/test.csv')
@@ -139,6 +141,32 @@ def confidenceInterval(dataSet):
 #10 Population Variance
 
 #11 P Value
+def pValue(dataSet):
+    mean_1 = sum(set1)/len(set1)
+    mean_2 = sum(set2)/len(set2)
+
+    n1 = len(set1) - 1
+    std_err_1 = (math.sqrt(sum([(val - mean_1) ** 2 for val in set1]))/(n1)) / math.sqrt(len(set1))
+
+    n2 = len(set2) - 1
+    std_err_2 = (math.sqrt(sum([(val - mean_2) ** 2 for val in set2]))/(n2)) / math.sqrt(len(set2))
+
+    std_err_diff = math.sqrt(std_err_1 ** 2 + std_err_2 ** 2)
+
+    t_statistic = (mean_1 - mean_2) / (std_err_diff)
+
+    deg_of_freedom = len(set1) + len(set2) - 2
+
+    alpha = 0.05
+
+    critical_value = t.ppf(1.0 - alpha, deg_of_freedom)
+
+    pValue = (1 - t.cdf(abs(t_statstic), deg_of_freedom)) * 2
+
+    if p > alpha:
+        return("Null hypothesis accepted: means are equal.")
+    else:
+        return("Null hypothesis rejected: means are not equal.")
 
 #12 Proportion
 def proportion(dataSet):
