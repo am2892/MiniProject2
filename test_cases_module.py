@@ -113,11 +113,11 @@ def test_calc_variance_fail():
 #11 - P-Value Tests
 def test_calc_pValue():
     from StatisticsModule import pValue
-    assert pValue(dataSet) == "Null hypothesis accepted: means are equal."
+    assert pValue(dataSet) == "p-value is less than alpha. Null hypothesis accepted: means are equal."
 
 def test_calc_pValue_fail():
     from StatisticsModule import pValue
-    assert pValue(dataSet) != "Null hypothesis rejected: means are not equal."
+    assert pValue(dataSet) != "p-value is greater than alpha. Null hypothesis rejected: means are not equal."
 
 #12 - Proportion Tests
 def test_calc_proportion():

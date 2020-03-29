@@ -167,9 +167,9 @@ def pValue(dataSet):
     pValue = (1 - t.cdf(abs(t_statistic), deg_of_freedom)) * 2
 
     if pValue > alpha:
-        return("Null hypothesis accepted: means are equal.")
+        return("p-value is less than alpha. Null hypothesis accepted: means are equal.")
     else:
-        return("Null hypothesis rejected: means are not equal.")
+        return("p-value is greater than alpha. Null hypothesis rejected: means are not equal.")
 
 #12 Proportion
 def proportion(dataSet):
