@@ -21,7 +21,7 @@ def test_calc_populationMean_fail():
     from StatisticsModule import populationMean
     assert populationMean(testData) != 1
 
-#2 - Median Tests
+#2 - Median Tests 
 def test_calc_median():
     from StatisticsModule import median
     assert median(testData) == 2
@@ -89,13 +89,13 @@ def test_calc_populationCorrelationCoefficient_fail():
     assert populationCorrelationCoefficient(dataSet) != 5
 
 #9 - Confidence Interval Tests
-def test_calc_confidenceInterval():
-    from StatisticsModule import confidenceInterval
-    assert confidenceInterval(testData) == (4.4841377118437524, -0.48413771184375287)
+#def test_calc_confidenceInterval():
+   #from StatisticsModule import confidenceInterval
+   #assert confidenceInterval(testData) == (4.4841377118437524, -0.48413771184375287)
 
-def test_calc_confidenceInterval_fail():
-    from StatisticsModule import confidenceInterval
-    assert confidenceInterval(testData) != 5
+#def test_calc_confidenceInterval_fail():
+   #from StatisticsModule import confidenceInterval
+   #assert confidenceInterval(testData) != 5
 
 #10 - Population Variance Tests
 def test_calc_variance():
