@@ -1,5 +1,5 @@
 from FileReader import readCSV
-from scipy.stats import t
+from scipy.stats import sem, t
 import numpy
 import math
 
@@ -126,11 +126,14 @@ def confidenceInterval(dataSet):
     confidence = .95
     n = len(dataSet)
     m = sum(dataSet) / n
-    std = math.sqrt(sum([(val - m)**2 for val in dataSet])/(len(dataSet) - 1))
-    std_err = std / math.sqrt(n)
-    t = m / std_err
-    h = std_err * t * float(1 + confidence) / float(2., n - 1)
+    #std = math.sqrt(sum([(val - m)**2 for val in dataSet])/(len(dataSet) - 1))
+   # std_err = std / math.sqrt(n)
+    #t = m / std_err
+    #h = std_err * t * float(1 + confidence) / float(2., n - 1)
+    std_err = sem(dataSet)
+    h = std_err * t.ppf((1 + confidence) / 2, n - 1)
 
+#print ("Confidence Interval is:", start, end)
     start = m + h
     end = m - h
 
