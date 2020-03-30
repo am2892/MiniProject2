@@ -1,5 +1,5 @@
 from FileReader import readCSV
-from scipy.stats import sem, t
+from scipy.stats import t
 import numpy
 import math
 
@@ -42,14 +42,27 @@ def mode(dataSet):
 
 # print(str(mode(dataSet)))
 
-#4 Population Variance  
-def variance(dataSet):
-    mean = sum(dataSet) / len(dataSet)
+#4 Population Standard Deviation  
+def populationStandardDeviation(dataSet):
+    # CSVlues are supposed to be the values that are given
+    u = 0
+    #This is the Mean
+    Top = 0
+    # This is the top half of the equation
+    Set = 0
+    # This the bottom half of the equation
+    Ans = 0
+    # This is the Answer
+    u = sum(dataSet)/len(dataSet)
 
-    variance = sum((xi - mean) ** 2 for xi in dataSet) / len(dataSet)
-    return variance
+    for i in dataSet:
+        Top +=(i-u)**2
 
-# print('Population Variance: ', str(variance(dataSet)))
+    Set = Top/len(dataSet)
+
+    Ans = math.sqrt(Set)
+
+    return Ans
 
 #5 Variance of population proportion
 def variancePopulationProportion(dataSet):
@@ -126,14 +139,11 @@ def confidenceInterval(dataSet):
     confidence = .95
     n = len(dataSet)
     m = sum(dataSet) / n
-    #std = math.sqrt(sum([(val - m)**2 for val in dataSet])/(len(dataSet) - 1))
-   # std_err = std / math.sqrt(n)
-    #t = m / std_err
-    #h = std_err * t * float(1 + confidence) / float(2., n - 1)
-    std_err = sem(dataSet)
-    h = std_err * t.ppf((1 + confidence) / 2, n - 1)
+    std = math.sqrt(sum([(val - m)**2 for val in dataSet])/(len(dataSet) - 1))
+    std_err = std / math.sqrt(n)
+    t = m / std_err
+    h = std_err * t * float(1 + confidence) / float(2., n - 1)
 
-#print ("Confidence Interval is:", start, end)
     start = m + h
     end = m - h
 
@@ -142,6 +152,13 @@ def confidenceInterval(dataSet):
 # print ("Confidence Interval:", confidenceInterval(dataSet))
 
 #10 Population Variance
+def variance(dataSet):
+    mean = sum(dataSet) / len(dataSet)
+
+    variance = sum((xi - mean) ** 2 for xi in dataSet) / len(dataSet)
+    return variance
+
+# print('Population Variance: ', str(variance(dataSet)))
 
 #11 P Value
 def pValue(dataSet):
@@ -211,24 +228,4 @@ def varianceSampleProportion(dataSet):
 
     print("Variance of Sample Proportion is:", varianceSampleProportion)
 
-#16 Population Standard Deviation
-def populationStandardDeviation(dataSet):
-    # CSVlues are supposed to be the values that are given
-    u = 0
-    #This is the Mean
-    Top = 0
-    # This is the top half of the equation
-    Set = 0
-    # This the bottom half of the equation
-    Ans = 0
-    # This is the Answer
-    u = sum(dataSet)/len(dataSet)
 
-    for i in dataSet:
-        Top +=(i-u)**2
-
-    Set = Top/len(dataSet)
-
-    Ans = math.sqrt(Set)
-
-    return Ans
